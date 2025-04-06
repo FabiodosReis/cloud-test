@@ -1,10 +1,7 @@
-name: testing gitaction trigger push
+name: testing gitaction trigger workflow dispatch
 
 run-name: ${{ github.event_name }} action
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 
 jobs:
   on_push:
@@ -12,4 +9,4 @@ jobs:
     steps:
       - name: step 1
         run: |
-          echo "test push workflow"
+          echo "test workflow dispatch"

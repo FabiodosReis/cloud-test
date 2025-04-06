@@ -1,0 +1,16 @@
+name: testing gitaction trigger push
+
+run-name: ${{ github.event_name }} action
+on:
+  push:
+    branches:
+      - master
+      - feature/**
+
+jobs:
+  on_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        run: |
+          echo "test push workflow"
