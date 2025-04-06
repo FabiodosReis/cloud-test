@@ -1,0 +1,14 @@
+name: testing gitaction trigger push
+
+run-name: ${{ github.event_name }} action
+on:
+  schedule:
+    - cron: '0 1 7 * *'
+
+jobs:
+  on_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        run: |
+          echo "test cron workflow"
